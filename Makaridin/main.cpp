@@ -1,99 +1,93 @@
+#define NOMINMAX
 #include <iostream>
 #include <Windows.h>
+#include <string>
+#include <limits>
 
-//void SetArray(int num[], int chery)
-//{
-//	for (int i = 0; i < chery; i++)
-//	{
-//		num[i] = rand() % 20 + 1;
-//	}
-//}
-//void SetArray(double num[], int chery)
-//{
-//	for (int i = 0; i < chery; i++)
-//	{
-//		num[i] = rand() % 20 + (double)(rand() % 200) / 100.0;
-//	}
-//}
-//void SetArray(char num[], int chery)
-//{
-//	for (int i = 0; i < chery; i++)
-//	{
-//		num[i] = 'a' + (rand() % 27);
-//	}
-//}
-//
-//void PrintArray(int num[], int chery)
-//{
-//	for (int i = 0; i < chery; i++)
-//	{
-//		std::cout << num[i] << " ";
-//	}
-//	std::cout << "\n";
-//}
-//
-//void PrintArray(double num[], int chery)
-//{
-//	for (int i = 0; i < chery; i++)
-//	{
-//		std::cout << num[i] << " ";
-//	}
-//	std::cout << "\n";
-//}
-//
-//void PrintArray(char num[], int chery)
-//{
-//	for (int i = 0; i < chery; i++)
-//	{
-//		std::cout << num[i] << " ";
-//	}
-//	std::cout << "\n";
-//}
-//
-//
-//template<typename T1>
-//T1 Substruct(T1 one, T1 two)
-//{
-//	retutn one - two;
-//}
+void Arrina(int* &arr, int size)
+{
+	arr = new int[size];
+}
+
+void panterka(int*& arr, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		arr[i] = rand() % 10;
+	}
+}
 
 
-//int prozz(int num,int num2)
-//{
-//	if (num2 == 0)
-//	{
-//		return 0;
-//	}
-//	return num + prozz(num, num2 - 1);
-//}
+void armynin(int*& arr)
+{
 
-
-
-//void myswap(int* num, int* num2)
-//{
-//	int n = *num;
-//	*num = *num2;
-//	*num2 = n;
-//}
-
-
-//void FillArray(int* arr, int size)
-//{
-//	for (int i = 0; i < size; i++)
-//	{
-//		*(arr + i) = rand() % 10 + 1;
-//	}
-//}
-
-
+}
 int main()
-
-
-
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
+	
+	std::string name = "text";
+	std::string name1 = "loh" + name;
+	std::cout << name;
+	std::cout << name1;
+
+	/*std::string sosok = "karasi";
+	for (int i = 0; i < sosok.size(); i++)
+	{
+		std::cout << sosok[i];
+	}*/
+
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	
+
+
+	return 0;
+
+}
+
+
+	/*int row = 3, col = 4;
+	int** arr = new int* [row];
+	for (int i = 0; i < row; i++)
+	{
+		std::cin >> col;
+		arr[i] = new int[col];
+	}
+	arr[1][2] = 10;
+
+
+	for (int i = 0; i < row; i++)
+	{
+		delete[]  arr[i];
+	}
+	delete[]  arr;*/
+
+
+
+/*  
+	int size = 0;
+	std::cin >> size;
+
+	int* name + nullptr;
+	int* name = new int[size];
+
+	name[1] = 10;
+
+	delete[] name;
+*/
+
+
+/*int size = 5;
+int* arr = new int[size] {1, 3, 2, 4, 5}
+for (int i = 0; i < size; i++)
+{
+	std::cout >> arr[i] << " ";
+}*/
+
+
+
 
 
 
@@ -238,54 +232,120 @@ int main()
 		*/
 
 
-		//const int mass = 10;
-		//int arr[mass];
-		//int num = 0;
-		//int sum = 0;
-		//int notsum = 0;
-		//for (int a = 0; a < mass; a++)
-		//{
-		//	arr[a] = rand() % 21 - 10;
+		/*const int mass = 10;
+		int arr[mass];
+		int num = 0;
+		int sum = 0;
+		int notsum = 0;
+		for (int a = 0; a < mass; a++)
+		{
+			arr[a] = rand() % 21 - 10;
+	std::cout << arr[a] << " ";
+			if (arr[a] > 0)
+			{
+				sum += arr[a];
+			}
+			else if (arr[a] < 0)
+			{
+				notsum += arr[a];
+			}
+		}
+		std::cout << "\n";
+		std::cout << sum << "\n";
+		std::cout << notsum << "\n";*/
+//void SetArray(int num[], int chery)
+//{
+//	for (int i = 0; i < chery; i++)
+//	{
+//		num[i] = rand() % 20 + 1;
+//	}
+//}
+//void SetArray(double num[], int chery)
+//{
+//	for (int i = 0; i < chery; i++)
+//	{
+//		num[i] = rand() % 20 + (double)(rand() % 200) / 100.0;
+//	}
+//}
+//void SetArray(char num[], int chery)
+//{
+//	for (int i = 0; i < chery; i++)
+//	{
+//		num[i] = 'a' + (rand() % 27);
+//	}
+//}
+//
+//void PrintArray(int num[], int chery)
+//{
+//	for (int i = 0; i < chery; i++)
+//	{
+//		std::cout << num[i] << " ";
+//	}
+//	std::cout << "\n";
+//}
+//
+//void PrintArray(double num[], int chery)
+//{
+//	for (int i = 0; i < chery; i++)
+//	{
+//		std::cout << num[i] << " ";
+//	}
+//	std::cout << "\n";
+//}
+//
+//void PrintArray(char num[], int chery)
+//{
+//	for (int i = 0; i < chery; i++)
+//	{
+//		std::cout << num[i] << " ";
+//	}
+//	std::cout << "\n";
+//}
+//
+//
+//template<typename T1>
+//T1 Substruct(T1 one, T1 two)
+//{
+//	retutn one - two;
+//}
+//int prozz(int num,int num2)
+//{
+//	if (num2 == 0)
+//	{
+//		return 0;
+//	}
+//	return num + prozz(num, num2 - 1);
+//}
+//void myswap(int* num, int* num2)
+//{
+//	int n = *num;
+//	*num = *num2;
+//	*num2 = n;
+//}
+//void FillArray(int* arr, int size)
+//{
+//	for (int i = 0; i < size; i++)
+//	{
+//		*(arr + i) = rand() % 10 + 1;
+//	}
+//}
+/*void ArrPlus(int*& arr, int size)
+{
+	int *temp = new int[size];
+	for (int i = 0; i < size; i++)
+	{
+		temp[i] = arr[i];
+	}
+	delete[] arr;
 
-		//	std::cout << arr[a] << " ";
-		//	if (arr[a] > 0)
-		//	{
-		//		sum += arr[a];
-		//	}
-		//	else if (arr[a] < 0)
-		//	{
-		//		notsum += arr[a];
-		//	}
-		//}
-		//std::cout << "\n";
-		//std::cout << sum << "\n";
-		//std::cout << notsum << "\n";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	arr = new int[size + 1];
+	for (int i = 0; i < size; i++)
+	{
+		arr[i] = temp[i];
+	}
+	arr[size - 1] = 100;
+	delete[] temp;
+}*/
 
 
 		 //double a = 0;
@@ -688,11 +748,6 @@ int main()
 			*/
 
 
-
-
-	return 0;
-
-}
 
 
 

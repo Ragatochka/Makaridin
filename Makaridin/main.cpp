@@ -4,7 +4,7 @@
 #include <string>
 #include <limits>
 
-void Arrina(int* &arr, int size)
+/*void Arrina(int* &arr, int size)
 {
 	arr = new int[size];
 }
@@ -21,17 +21,103 @@ void panterka(int*& arr, int size)
 void armynin(int*& arr)
 {
 
-}
+}*/
 int main()
 {
 	SetConsoleCP(1251);
 	SetConsoleOutputCP(1251);
 	srand(time(NULL));
-	
-	std::string name = "text";
+
+
+
+
+	std::string login;
+	std::string password;
+	std::string irina;
+	std::string svetka;
+
+	std::cout << "\t\tРегистрация\n";
+	std::cout << "Количество символов должно быть от 5 до 15\n";
+	while (true)
+	{
+		std::cout << "Введите Логин: ";
+		std::getline(std::cin, login, '\n');
+		if (login.size() >= 4 && login.size() <= 14)
+		{
+			while (true)
+			{
+				std::cout << "Введите Пароль: ";
+				std::getline(std::cin, password, '\n');
+				if (password.size() >= 4 && password.size() <= 14)
+				{
+					std::cout << "Регистрация завершена!";
+					Sleep(1500);
+					break;
+				}
+				else
+				{
+					std::cout << "Количество символов должно быть от 5 до 15";
+					Sleep(1500);
+					system("cls");
+				}
+			}
+			break;
+		}
+		else 
+		{
+			std::cout << "Количество символов должно быть от 5 до 15";
+			Sleep(1500);
+			system("cls");
+		}
+		
+	}
+	system("cls");
+	std::cout << "\t\tВход в аккаунт\n";
+	while (true)
+	{
+		std::cout << "Введите Логин: ";
+		std::getline(std::cin, irina, '\n');
+		if (login == irina)
+		{
+			std::cout << "Логин верный!\n";
+			while (true)
+			{
+				std::cout << "Введите Пороль: ";
+				std::getline(std::cin, svetka, '\n');
+				if (password == svetka)
+				{
+					std::cout << "Вы успешно вошли в аккаунт!";
+					Sleep(1500);
+					break;
+				}
+				else
+				{
+					std::cout << "Не верный Логин";
+				}
+			}
+			break;
+		}
+		else
+		{
+			std::cout << "Не верный Логин";
+			Sleep(1500);
+			system("cls");
+		}
+
+	}
+
+
+
+
+
+
+
+
+
+/*	std::string name = "text";
 	std::string name1 = "loh" + name;
 	std::cout << name;
-	std::cout << name1;
+	std::cout << name1;*/
 
 	/*std::string sosok = "karasi";
 	for (int i = 0; i < sosok.size(); i++)
@@ -39,7 +125,7 @@ int main()
 		std::cout << sosok[i];
 	}*/
 
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	//std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 	
 
 

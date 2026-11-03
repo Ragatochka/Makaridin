@@ -3,35 +3,47 @@
 #include <Windows.h>
 #include <string>
 #include <limits>
+#include <fcntl.h>  // _setmod, _fileno
+#include <io.h>  
+#include "test.hpp"
 
-/*void Arrina(int* &arr, int size)
-{
-	arr = new int[size];
-}
-
-void panterka(int*& arr, int size)
-{
-	for (int i = 0; i < size; i++)
-	{
-		arr[i] = rand() % 10;
-	}
-}
-
-
-void armynin(int*& arr)
-{
-
-}*/
+ 
 int main()
 {
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+	_setmode(_fileno(stdin), _O_U16TEXT);
+	_setmode(_fileno(stdout), _O_U16TEXT);
 	srand(time(NULL));
 
 
 
 
-	std::string login;
+
+	/*std::wstring name = L"Hello world";
+	std::wcout << name << L"\n" << std::endl;
+
+	std::wstring one, two;
+
+	std::wcout << L"Введите первый текст: ";
+	std::getline(std::wcin, one, L'\n');
+
+	std::wcout << L"Введите второй текст: ";
+	std::getline(std::wcin, two, L'\n');
+
+	std::wcout << L"\nВы ввели:\n";
+	std::wcout << L"1: " << one << std::endl;
+	std::wcout << L"2: " << two << std::endl;*/
+
+	
+
+
+
+	PrintHello();
+
+
+	one = 10;
+
+
+	/*std::string login;
 	std::string password;
 	std::string irina;
 	std::string svetka;
@@ -104,15 +116,7 @@ int main()
 			system("cls");
 		}
 
-	}
-
-
-
-
-
-
-
-
+	}*/
 
 /*	std::string name = "text";
 	std::string name1 = "loh" + name;
@@ -174,7 +178,24 @@ for (int i = 0; i < size; i++)
 
 
 
+/*void Arrina(int* &arr, int size)
+{
+	arr = new int[size];
+}
 
+void panterka(int*& arr, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		arr[i] = rand() % 10;
+	}
+}
+
+
+void armynin(int*& arr)
+{
+
+}*/
 
 
 	//int ptr = new int;
